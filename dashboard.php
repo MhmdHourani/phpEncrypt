@@ -11,13 +11,10 @@ if (isset($_GET['logout'])) {
     header('location: login.php');
 }
 
-//
 $reg_usd = '/^[0-9]+\.*[0-9]*[\$,\s\$]/';
 $reg_euro = '/^[0-9]+\.*[0-9]*[\€,\s\€]/';
 $reg_pound = '/^[0-9]+\.*[0-9]*[\£,\s\£]/';
-// $simple = '/^\s*[$]?\s*\d+(\.\d{2})?\s*$/';
-// $commas = '/^\s*[$]?\s*\d{1,3}(\,\d{3})*(\.\d{2})?\s*$/';
-// $both   = '/^\s*[$]?\s*((\d+)|(\d{1,3}(\,\d{3})+))(\.\d{2})?\s*$/';
+
 $error = "";
 $usd = "";
 $euro = "";
@@ -54,11 +51,9 @@ if (isset($_POST['save'])) {
     }
 }
 
-
-
 ?>
 <!DOCTYPE html>
-<html lang="">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -66,23 +61,22 @@ if (isset($_POST['save'])) {
     <title></title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        .setting {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
 
+        .setting select {
+            width: 40%;
+            display: inline-block;
+            height: 35px;
+
+        }
+    </style>
 </head>
-<style>
-    .setting {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 10px;
-    }
-
-    .setting select {
-        width: 40%;
-        display: inline-block;
-        height: 35px;
-
-    }
-</style>
 
 <body>
     <div class="container">
