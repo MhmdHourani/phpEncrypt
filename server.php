@@ -84,7 +84,7 @@ if (isset($_POST['login_user'])) {
         if (!empty($user)) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = 'You are now logger in';
-            header('location: index.php');
+            header('location: dashboard.php');
         } else {
             array_push($errors, "Worng username or password.");
         }
