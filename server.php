@@ -61,7 +61,7 @@ if (isset($_POST['reg_user'])) {
         $stmt1->execute(array($username, $email, $password));
         $_SESSION['username'] = $username;
         $_SESSION['seccess'] = "You are new logged in";
-        header('location: index.php');
+        header('location: dashboard.php');
     }
 }
 
